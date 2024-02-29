@@ -3,15 +3,15 @@ import java.util.Scanner;
 public class productprice{
 
 static double productprice;
- static double VAT;
+ static double VAT=0.16;
  
  public static void main(String[] args) {
     try (Scanner sc = new Scanner(System.in)) {
         System.out.println("Enter the product price:");
-        productprice=sc.nextInt();
+        productprice=sc.nextDouble();
    
-        System.out.println("Enter the Value Added Tax:");
-        VAT=sc.nextInt();
+        
+        
 
         
          

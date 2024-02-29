@@ -2,18 +2,16 @@ import java.util.Scanner;
 
 public class Hoursworked {
     static double hoursworked;
-   
-    static double hourlyrate;
+    static double withholdingtax=0.2;
+    static double hourlyrate= 450.50;
     public static void main(String[]args){
-       try (Scanner sc = new Scanner(System.in)) {
+       try (Scanner income = new Scanner(System.in)) {
         System.out.println("The number of hours worked:");
-           hoursworked=sc.nextInt();
-           System.out.println("The hourly rate is:");
-            hourlyrate = sc.nextInt();
+           hoursworked=income.nextDouble();
          
             double grosspay=hoursworked*hourlyrate;
             
-            double withholdingtax=(20/100)*grosspay;
+            double withholdingtax=grosspay*0.2;
             double netpay=grosspay-withholdingtax;
 
             System.out.println("The number of Hours Worked is :"+hoursworked);

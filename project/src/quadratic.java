@@ -9,14 +9,17 @@ public static  void main(String[] args) {
     try (Scanner sc = new Scanner(System.in)) {
 
          System.out.println("Enter the value of a:");
-         a=sc.nextInt();
+         a=sc.nextDouble();
+          
+
+
 
          System.out.println("Enter the value of b:");
-         b=sc.nextInt();
+         b=sc.nextDouble();
 
 
          System.out.println("Enter the value of c:");
-         c=sc.nextInt();
+         c=sc.nextDouble();
          
          double z=b*b-4*a*c;
          if(z<0){
