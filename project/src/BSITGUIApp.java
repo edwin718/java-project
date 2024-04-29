@@ -1,6 +1,8 @@
 import java.awt.*;
+import java.awt.event.*;
+
 import javax.swing.*;
-public class BSITGUIApp extends JFrame {
+public class BSITGUIApp extends JFrame implements ActionListener {
     private JButton btnClicks;
     private JLabel lblClicks;
     private int noClicks;
@@ -39,4 +41,23 @@ public class BSITGUIApp extends JFrame {
         jplComponents.add(lblClicks);
         contentPane.add(jplComponents);
     }
+    
+    public void actionperformed(ActionEvent e){
+        if (e.getSource()==btnClicks){
+            noClicks++;
+            lblClicks.setText("No of button clicks:"+noClicks);
+          System.out.println("Button clicked!");
+        }
+
+    }
+    public   void handleEvent(){
+        btnClicks.addActionListener(this);
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+        throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
+    }
+  
+  
 } 
